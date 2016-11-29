@@ -19,8 +19,8 @@ public class HelloController {
     @ApiOperation(value = "添加用户",httpMethod ="POST", response = User.class,notes = "HelloWorld")
     public User hello(@ApiParam(required = true,name = "paramData",value = "用户信息 json 数据") String paramData){
         User userBean = new User();
-        userBean.setName("liudehua");
-        userBean.setOtherInfo(paramData);
+        userBean.setName("测试用户");
+        userBean.setOtherInfo("其他信息");
         return userBean;
     }
 }
