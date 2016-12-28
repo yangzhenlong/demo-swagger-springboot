@@ -23,4 +23,11 @@ public class HelloController {
         userBean.setOtherInfo("其他信息");
         return userBean;
     }
+
+
+    @RequestMapping(value = "/hello2")
+    @ApiOperation(value = "查询用户",httpMethod ="GET", response = String.class,notes = "HelloWorld2")
+    public String hello1(@ApiParam(required = true,name = "s",value = "str json 数据") String s){
+        return "hello " + s;
+    }
 }
